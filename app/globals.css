@@ -1,0 +1,165 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUhiZTaR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZTaR.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUtiZTaR.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik Dirt';
+  src: url('https://fonts.gstatic.com/s/rubikdirt/v4/DtVmJxC7WLEj1uIXEWAdilce.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('https://fonts.gstatic.com/s/permanentmarker/v16/Fh4uPib9Iyv2ucM6pGQMWimMp004HaqI.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Black Ops One';
+  src: url('https://fonts.gstatic.com/s/blackopsone/v20/qWcsB6-ypo7xBdr6Xshe96H3aDvbtw.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --font-heading: 'Rubik Dirt', cursive;
+  --font-sans: 'Oswald', sans-serif;
+  --font-mono: 'Black Ops One', cursive;
+  --font-marker: 'Permanent Marker', cursive;
+  
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* S.A. Towing Custom Theme - Dark aggressive look */
+  --black: #070300;
+  --dark: #0e0500;
+  --card-bg: #180800;
+  --border-color: #3a1200;
+  --gold: #cc2200;
+  --gold-light: #ff4400;
+  --white-text: #ffcc44;
+  --muted-text: #c87820;
+  --red: #cc1100;
+
+  --background: #070300;
+  --foreground: #ffcc44;
+  --card: #180800;
+  --card-foreground: #ffcc44;
+  --popover: #180800;
+  --popover-foreground: #ffcc44;
+  --primary: #cc2200;
+  --primary-foreground: #ffcc44;
+  --secondary: #0e0500;
+  --secondary-foreground: #ffcc44;
+  --muted: #0e0500;
+  --muted-foreground: #c87820;
+  --accent: #3a1200;
+  --accent-foreground: #ffcc44;
+  --destructive: #cc1100;
+  --border: #3a1200;
+  --input: #3a1200;
+  --ring: #cc2200;
+  --chart-1: #cc2200;
+  --chart-2: #ff4400;
+  --chart-3: #ffcc44;
+  --chart-4: #c87820;
+  --chart-5: #3a1200;
+  --radius: 0.5rem;
+  --sidebar: #0e0500;
+  --sidebar-foreground: #ffcc44;
+  --sidebar-primary: #cc2200;
+  --sidebar-primary-foreground: #ffcc44;
+  --sidebar-accent: #3a1200;
+  --sidebar-accent-foreground: #ffcc44;
+  --sidebar-border: #3a1200;
+  --sidebar-ring: #cc2200;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
